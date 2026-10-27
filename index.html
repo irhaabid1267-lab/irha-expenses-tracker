@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <form id="expenseForm">
+            <input type="text" id="title" placeholder="Expense Title" required>
+
+            <input type="number" id="amount" placeholder="Amount" min="0.01" step="0.01" required>
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <h3>Total Expense: Rs. <span id="total">0</span></h3>
+
+        <h2>Expense Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="expenseList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
